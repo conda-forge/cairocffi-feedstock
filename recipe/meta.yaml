@@ -1,6 +1,6 @@
 {% set name = "cairocffi" %}
-{% set version = "0.7.2" %}
-{% set sha256 = "e42b4256d27bd960cbf3b91a6c55d602defcdbc2a73f7317849c80279feeb975" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "47eb1c53d15041dda983e0004b249123bb18edb10dbff3742d039fedd41e6778" %}
 
 package:
   name: cairocffi
@@ -15,7 +15,7 @@ source:
     - dlopen-patch.osx.txt  # [osx]
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
