@@ -1,7 +1,7 @@
 About cairocffi
 ===============
 
-Home: https://github.com/SimonSapin/cairocffi
+Home: https://github.com/Kozea/cairocffi
 
 Package license: BSD 3-Clause
 
