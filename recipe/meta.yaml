@@ -1,6 +1,6 @@
 {% set name = "cairocffi" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "65f21e6786e2b255ab1d3fda53a365a3565bb1808cabbbe59d99a797c61d3545" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "4600529463a8ece4bbdaf82e14a78769eaf143a8559e1b5469004f3fb8e7ff4d" %}
 
 package:
   name: cairocffi
@@ -8,14 +8,14 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - dlopen-patch.linux.txt  # [linux]
     - dlopen-patch.osx.txt  # [osx]
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
