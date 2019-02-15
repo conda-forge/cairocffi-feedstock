@@ -1,6 +1,6 @@
 {% set name = "cairocffi" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "4600529463a8ece4bbdaf82e14a78769eaf143a8559e1b5469004f3fb8e7ff4d" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "60485cf89ab0fdfc0446be53407b54da81c64f097fd52f12493b8375035b1445" %}
 
 package:
   name: cairocffi
