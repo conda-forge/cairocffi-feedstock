@@ -10,9 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/Kozea/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - dlopen-patch.linux.txt  # [linux]
-    - dlopen-patch.osx.txt  # [osx]
+ # patches:
+ #   - dlopen-patch.linux.txt  # [linux]
+ #   - dlopen-patch.osx.txt  # [osx]
 
 build:
   number: 1
