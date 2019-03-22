@@ -1,0 +1,18 @@
+diff --git a/cairocffi/__init__.py b/cairocffi/__init__.py
+index 77c0a94..98b99f3 100644
+--- a/cairocffi/__init__.py
++++ b/cairocffi/__init__.py
+@@ -38,7 +38,12 @@ def dlopen(ffi, *names):
+     raise OSError("dlopen() failed to load a library: %s" % ' / '.join(names))
+ 
+ 
+-cairo = dlopen(ffi, 'cairo', 'cairo-2', 'cairo-gobject-2')
++if sys.platform == "linux":
++    cairo = ffi.dlopen('libcairo.so')
++elif sys.platform == "darwin":
++    cairo = ffi.dlopen('libcairo.dylib')
++else:
++    cairo = dlopen(ffi, 'cairo', 'cairo-2', 'cairo-gobject-2')
+ 
+ 
+ class _keepref(object):
