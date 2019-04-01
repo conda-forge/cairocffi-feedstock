@@ -1,11 +1,7 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About cairocffi
 ===============
 
-Home: https://github.com/SimonSapin/cairocffi
+Home: https://github.com/Kozea/cairocffi
 
 Package license: BSD 3-Clause
 
@@ -18,9 +14,14 @@ Summary: cffi-based cairo bindings for Python
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cairocffi-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cairocffi-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/cairocffi-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cairocffi-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+
+<table><tr>
+    <td>All platforms:</td>
+    <td>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -114,5 +115,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@carlodri](https://github.com/carlodri/)
 * [@johanneskoester](https://github.com/johanneskoester/)
 
