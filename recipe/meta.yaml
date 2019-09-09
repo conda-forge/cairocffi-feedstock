@@ -22,11 +22,11 @@ requirements:
     - python
     - pip
     - cffi >=1.1.0
-    - cairo 1.14.*
+    - cairo >=1.14.0
   run:
     - python
     - cffi >=1.1.0
-    - cairo 1.14.*
+    - cairo >=1.14.0
 
 test:
   imports:
