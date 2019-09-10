@@ -6,7 +6,6 @@ package:
   version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 15386c3a9e08823d6826c4491eaccc7b7254b1dc587a3b9ce60c350c3f990337
   patches:
@@ -14,19 +13,19 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 2
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - python
     - pip
-    - cffi >=1.1.0
-    - cairo >=1.14.0
+    - cffi >=1.1
+    - cairo >=1.14
   run:
     - python
-    - cffi >=1.1.0
-    - cairo >=1.14.0
+    - cffi >=1.1
+    - cairo >=1.14
 
 test:
   imports:
