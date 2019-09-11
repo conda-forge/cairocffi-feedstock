@@ -20,6 +20,7 @@ requirements:
     - pip
     - cffi >=1.1
     - cairo >=1.14
+    - pytest-runner
   run:
     - python >=3.5
     - cffi >=1.1
