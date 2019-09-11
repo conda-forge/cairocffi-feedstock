@@ -6,27 +6,24 @@ package:
   version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f1c0c5878f74ac9ccb5d48b2601fcc75390c881ce476e79f4cfedd288b1b05db
-  patches:
-    - dlopen-patch.diff
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - python
     - pip
-    - cffi >=1.1.0
-    - cairo 1.14.*
+    - cffi >=1.1
+    - cairo >=1.14
   run:
     - python
-    - cffi >=1.1.0
-    - cairo 1.14.*
+    - cffi >=1.1
+    - cairo >=1.14
 
 test:
   imports:
