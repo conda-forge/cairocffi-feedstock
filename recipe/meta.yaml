@@ -16,12 +16,12 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
     - cffi >=1.1
     - cairo >=1.14
   run:
-    - python
+    - python >=3.5
     - cffi >=1.1
     - cairo >=1.14
 
