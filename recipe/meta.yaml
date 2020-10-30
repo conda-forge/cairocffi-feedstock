@@ -1,18 +1,18 @@
 {% set name = "cairocffi" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: cairocffi
-  version: "{{ version }}"
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f1c0c5878f74ac9ccb5d48b2601fcc75390c881ce476e79f4cfedd288b1b05db
+  sha256: 9a979b500c64c8179fec286f337e8fe644eca2f2cd05860ce0b62d25f22ea140
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -35,7 +35,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'cffi-based cairo bindings for Python'
+  summary: cffi-based cairo bindings for Python
 
 extra:
   recipe-maintainers:
