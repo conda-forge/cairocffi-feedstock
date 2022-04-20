@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - cffi >=1.1
     - cairo >=1.14
     - pytest-runner
   run:
-    - python >=3.6
+    - python >=3.7
     - cffi >=1.1
     - cairo >=1.14
 
