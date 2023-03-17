@@ -1,5 +1,5 @@
 {% set name = "cairocffi" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: cairocffi
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 509339b32ccd8d7b00c2204c32736cde78db53a32e6a162d312478d25626cd9a
+  sha256: d105b49009d9b4970a459e38ff030cb5dfc8c8ee231e867d28f77ee9df44495e
 
 build:
   noarch: python
