@@ -1,5 +1,5 @@
 {% set name = "cairocffi" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: cairocffi
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 071ab7b72e3533300b0bfd55a52056b4ffdc1ed6e656779e2aced9b709b8a295
+  sha256: e7f21ea1546a5d490ceba77b6216c1393d7e0a7856e292864a88a7506092bf4d
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - cffi >=1.1
     - cairo >=1.14
     - pytest-runner
+    - flit-core
   run:
     - python >=3.7
     - cffi >=1.1
