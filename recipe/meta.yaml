@@ -21,6 +21,7 @@ requirements:
     - cffi >=1.1
     - cairo >=1.14
     - pytest-runner
+    - flit-core
   run:
     - python >=3.7
     - cffi >=1.1
