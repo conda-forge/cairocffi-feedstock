@@ -6,28 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e48ee864884ec4a3a34bfa8c9ab9999f688286eb714a15a43ec9d068c36557b
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - cffi >=1.1
     - cairo >=1.14
     - pytest-runner
     - flit-core
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - cffi >=1.1
     - cairo >=1.14
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cairocffi
 
